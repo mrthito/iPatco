@@ -1,6 +1,6 @@
 <?php
 
-namespace MrThito\iPatco;
+namespace MrThito\Ipatco;
 
 use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Arr;

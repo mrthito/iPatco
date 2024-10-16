@@ -1,10 +1,10 @@
 <?php
 
-namespace MrThito\iPatco;
+namespace MrThito\Ipatco;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
-class iPatcoExtendSocialite
+class IpatcoExtendSocialite
 {
     public function handle(SocialiteWasCalled $socialiteWasCalled): void
     {
