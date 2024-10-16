@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Yahoo;
+namespace MrThito\iPatco;
 
 use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Arr;
@@ -9,7 +9,7 @@ use SocialiteProviders\Manager\OAuth2\User;
 
 class Provider extends AbstractProvider
 {
-    public const IDENTIFIER = 'YAHOO';
+    public const IDENTIFIER = 'IPATCO';
 
     /**
      * {@inheritdoc}
@@ -27,7 +27,7 @@ class Provider extends AbstractProvider
             $this->with(['openid2_realm' => $parseUrl['scheme'].'://'.$parseUrl['host']]);
         }
 
-        return $this->buildAuthUrlFromBase('https://api.login.yahoo.com/oauth2/request_auth', $state);
+        return $this->buildAuthUrlFromBase('https://account.ipatco.com/oauth2/request_auth', $state);
     }
 
     /**
@@ -35,7 +35,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return 'https://api.login.yahoo.com/oauth2/get_token';
+        return 'https://account.ipatco.com/oauth2/get_token';
     }
 
     /**
@@ -43,7 +43,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://api.login.yahoo.com/openid/v1/userinfo', [
+        $response = $this->getHttpClient()->get('https://account.ipatco.com/openid/v1/userinfo', [
             RequestOptions::HEADERS => [
                 'Authorization' => 'Bearer '.$token,
             ],
@@ -53,7 +53,7 @@ class Provider extends AbstractProvider
     }
 
     /**
-     * Maps Yahoo object to User Object.
+     * Maps iPatco object to User Object.
      *
      * Note: To have access to e-mail, you need to request "Profiles (Social Directory) - Read/Write Public and Private"
      * {@inheritdoc}

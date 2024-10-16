@@ -1,7 +1,7 @@
-# Yahoo
+# iPatco
 
 ```bash
-composer require socialiteproviders/yahoo
+composer require mrthito/ipatco
 ```
 
 ## Installation & Basic Usage
@@ -11,10 +11,10 @@ Please see the [Base Installation Guide](https://socialiteproviders.com/usage/),
 ### Add configuration to `config/services.php`
 
 ```php
-'yahoo' => [    
-  'client_id' => env('YAHOO_CLIENT_ID'),  
-  'client_secret' => env('YAHOO_CLIENT_SECRET'),  
-  'redirect' => env('YAHOO_REDIRECT_URI') 
+'ipatco' => [    
+  'client_id' => env('IPATCO_CLIENT_ID'),  
+  'client_secret' => env('IPATCO_CLIENT_SECRET'),  
+  'redirect' => env('IPATCO_REDIRECT_URI') 
 ],
 ```
 
@@ -28,7 +28,7 @@ In Laravel 11, the default `EventServiceProvider` provider was removed. Instead,
 
 ```php
 Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
-    $event->extendSocialite('yahoo', \SocialiteProviders\Yahoo\Provider::class);
+    $event->extendSocialite('ipatco', \SocialiteProviders\iPatco\Provider::class);
 });
 ```
 <details>
@@ -43,7 +43,7 @@ Add the event to your `listen[]` array in `app/Providers/EventServiceProvider`. 
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // ... other providers
-        \SocialiteProviders\Yahoo\YahooExtendSocialite::class.'@handle',
+        \SocialiteProviders\iPatco\iPatcoExtendSocialite::class.'@handle',
     ],
 ];
 ```

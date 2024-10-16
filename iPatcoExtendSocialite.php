@@ -1,13 +1,13 @@
 <?php
 
-namespace SocialiteProviders\Yahoo;
+namespace MrThito\iPatco;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
-class YahooExtendSocialite
+class iPatcoExtendSocialite
 {
     public function handle(SocialiteWasCalled $socialiteWasCalled): void
     {
-        $socialiteWasCalled->extendSocialite('yahoo', Provider::class);
+        $socialiteWasCalled->extendSocialite('ipatco', Provider::class);
     }
 }

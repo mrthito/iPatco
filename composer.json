@@ -1,33 +1,33 @@
 {
-    "name": "socialiteproviders/yahoo",
-    "description": "Yahoo OAuth2 Provider for Laravel Socialite",
+    "name": "mrthito/ipatco",
+    "description": "iPatco OAuth Provider for Laravel Socialite",
     "license": "MIT",
     "keywords": [
         "laravel",
         "oauth",
         "provider",
         "socialite",
-        "yahoo"
+        "iPatco"
     ],
     "authors": [
         {
-            "name": "Brian Faust",
-            "email": "hello@brianfaust.de"
+            "name": "Prashant Rijal",
+            "email": "prashant@ipatco.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/socialiteproviders/providers/issues",
-        "source": "https://github.com/socialiteproviders/providers",
-        "docs": "https://socialiteproviders.com/yahoo"
+        "issues": "https://github.com/mrthito/ipatco/issues",
+        "source": "https://github.com/mrthito/ipatco",
+        "docs": "https://ipatco.com/docs"
     },
     "require": {
-        "php": "^8.0",
+        "php": "^8.2",
         "ext-json": "*",
         "socialiteproviders/manager": "^4.4"
     },
     "autoload": {
         "psr-4": {
-            "SocialiteProviders\\Yahoo\\": ""
+            "SocialiteProviders\\iPatco\\": ""
         }
     }
 }
