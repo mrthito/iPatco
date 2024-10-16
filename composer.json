@@ -23,11 +23,11 @@
     "require": {
         "php": "^8.2",
         "ext-json": "*",
-        "MrThito/manager": "^4.4"
+        "socialiteproviders/manager": "^4.4"
     },
     "autoload": {
         "psr-4": {
-            "MrThito\\Ipatco\\": ""
+            "MrThito\\iPatco\\": ""
         }
     }
 }

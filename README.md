@@ -28,7 +28,7 @@ In Laravel 11, the default `EventServiceProvider` provider was removed. Instead,
 
 ```php
 Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
-    $event->extendSocialite('ipatco', \SocialiteProviders\iPatco\Provider::class);
+    $event->extendSocialite('ipatco', \MrThito\Ipatco\Provider::class);
 });
 ```
 <details>
@@ -43,7 +43,7 @@ Add the event to your `listen[]` array in `app/Providers/EventServiceProvider`. 
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // ... other providers
-        \SocialiteProviders\iPatco\iPatcoExtendSocialite::class.'@handle',
+        \MrThito\Ipatco\IpatcoExtendSocialite::class.'@handle',
     ],
 ];
 ```
